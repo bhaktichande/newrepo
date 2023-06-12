@@ -2,6 +2,7 @@ pipeline {
     agent any
 	environment {
 	    class_name = 'velocity'
+	    placename = kalyan
 	}
 
     stages {
@@ -13,6 +14,7 @@ pipeline {
             steps {
 			    sh '''
                 echo "$(BUILD_ID)"
+		echo "$(placename)"
 				echo "This is user defined global variable ${class_name}"
                  '''
             }
