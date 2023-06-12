@@ -3,6 +3,7 @@ pipeline {
 	environment {
 	    class_name = 'velocity'
 	    placeid = 123
+	    placeid2 = 98765
 	    location_id = 987
 	}
 
@@ -15,6 +16,7 @@ pipeline {
             steps {
 			    sh '''
                 echo "$(BUILD_ID)"
+		echo "$(placeid2)"
 		echo "$(placeid)"
 		echo "$(location_id)"
 				echo "This is user defined global variable ${class_name}"
